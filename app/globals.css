@@ -1,0 +1,427 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Variables de couleur dynamiques */
+    --primary-hue: 36;
+    --primary-saturation: 30%;
+    --primary-lightness: 50%;
+    --accent-hue: 36;
+    --accent-saturation: 30%;
+    --accent-lightness: 50%;
+
+    /* Thème clair */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: var(--accent-hue) var(--accent-saturation) var(--accent-lightness);
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    /* Thème sombre */
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: var(--accent-hue) var(--accent-saturation) var(--accent-lightness);
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.container {
+  @apply px-4 md:px-6;
+}
+
+.vizir-heading {
+  @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+}
+
+.vizir-subheading {
+  @apply text-2xl md:text-3xl font-light tracking-tight;
+}
+
+.vizir-button {
+  @apply border border-primary text-primary hover:bg-primary/10 transition-colors px-6 py-2;
+}
+
+.vizir-section {
+  @apply py-12 sm:py-16 md:py-24;
+}
+
+.vizir-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.vizir-card {
+  @apply bg-card rounded-none overflow-hidden;
+}
+
+.vizir-card-image {
+  @apply relative;
+  @apply aspect-[4/3];
+  @apply overflow-hidden;
+}
+
+.vizir-card-content {
+  @apply p-4 sm:p-6 space-y-4;
+}
+
+.vizir-card-title {
+  @apply text-xl font-medium;
+}
+
+.vizir-card-description {
+  @apply text-muted-foreground;
+}
+
+.vizir-card-footer {
+  @apply pt-4 flex justify-between items-center;
+}
+
+.vizir-link {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+.vizir-nav-link {
+  @apply text-sm uppercase tracking-wider hover:text-primary transition-colors;
+}
+
+.vizir-nav-link-active {
+  @apply text-primary border-b border-primary;
+}
+
+.bg-pattern {
+  background-image: url("https://www.vizirgroup.com/wp-content/uploads/2024/03/patt.svg");
+  background-repeat: repeat;
+  background-size: 500px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.project-title {
+  @apply font-semibold text-primary;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+  @apply absolute bottom-0 left-0 right-0 pt-16 pb-4 px-4 sm:pb-6 sm:px-6;
+}
+
+/* Ajustements pour le thème clair */
+.light .project-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.light .bg-pattern {
+  opacity: 0.05;
+}
+
+.dark .bg-pattern {
+  opacity: 0.1;
+}
+
+/* Transition de thème */
+.theme-transition {
+  @apply transition-colors duration-300;
+}
+
+/* Transitions pour les changements de couleur */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Amélioration des transitions de page */
+body {
+  transition: background-color 0s;
+}
+
+/* Prévenir le flash blanc pendant les transitions de page */
+.next-page-transition {
+  transition: none !important;
+}
+
+/* Assurer que le fond reste cohérent pendant les transitions */
+html,
+body {
+  background-color: hsl(var(--background));
+}
+
+/* Désactiver les transitions pendant la navigation entre les pages */
+.page-transition-active * {
+  transition: none !important;
+}
+
+/* Styles pour le carousel de témoignages */
+.testimonial-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: hsl(var(--primary) / 0.3);
+  opacity: 1;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background-color: hsl(var(--primary));
+}
+
+/* Nouvelles animations pour les éléments interactifs */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px hsl(var(--primary) / 0.5);
+  transform: translateY(-2px);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.hover-rotate {
+  transition: transform 0.5s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(3deg);
+}
+
+/* Animation pour les liens de navigation */
+.nav-link-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.nav-link-animation:hover::after {
+  width: 100%;
+}
+
+/* Animation pour les images */
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation pour les cartes */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour les boutons */
+.button-pulse {
+  position: relative;
+}
+
+.button-pulse::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 hsl(var(--primary) / 0.7);
+  animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px hsl(var(--primary) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0);
+  }
+}
