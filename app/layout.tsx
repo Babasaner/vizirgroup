@@ -11,6 +11,7 @@ import { ThemeCustomizer } from "@/components/theme-customizer"
 import ThemeInit from "./theme-init"
 import ScrollToTopNavigation from "@/components/scroll-to-top-navigation"
 import PageTransitionFix from "@/components/page-transition-fix"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning className="scroll-smooth">
       <body className={`${inter.className} theme-transition`}>
+      <Suspense>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
           <ThemeInit />
           <ScrollToTopNavigation />
@@ -49,6 +51,7 @@ export default function RootLayout({
             <ThemeCustomizer />
           </div>
         </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   )
