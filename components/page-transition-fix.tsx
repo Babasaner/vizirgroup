@@ -5,7 +5,7 @@ import { useEffect } from "react"
 
 export default function PageTransitionFix() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
+ let params = new URLSearchParams(document.location.search);
 
   useEffect(() => {
     // Ajouter une classe au body pendant la transition de page
@@ -20,7 +20,7 @@ export default function PageTransitionFix() {
       clearTimeout(timer)
       document.body.classList.remove("page-transition-active")
     }
-  }, [pathname, searchParams])
+  }, [pathname, params])
 
   return null
 }
