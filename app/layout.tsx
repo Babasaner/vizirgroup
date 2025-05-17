@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     ],
    
   },
-  manifest: "/site.webmanifest"
-    
+  manifest: "/site.webmanifest",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
