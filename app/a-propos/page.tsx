@@ -12,11 +12,8 @@ export default function AboutPage() {
     <PageTransition>
       <div>
         <div className="relative min-h-[60vh] flex items-center justify-center">
-          <div className="absolute inset-0 z-0">
-            <Image src="https://www.vizirgroup.com/wp-content/uploads/2022/11/Lika-2.png" alt="À Propos de Vizir Group" fill className="object-cover brightness-[0.6]" />
-          </div>
           <div className="container relative z-10 text-center">
-            <AnimatedText text="A propos" className="vizir-heading text-white" tag="h1" />
+            <AnimatedText text="A propos" className="vizir-heading text-white border-4 border-primary p-4 px-4" tag="h1" />
           </div>
         </div>
 
@@ -43,7 +40,7 @@ export default function AboutPage() {
               </AnimatedElement>
               <AnimatedElement type="slide-left" delay={0.2}>
                 <div className="relative aspect-video overflow-hidden">
-                  <Image src="https://www.vizirgroup.com/wp-content/uploads/2024/03/asset-4.png" alt="Histoire de Vizir Group" fill className="object-cover" />
+                  <Image src="/asset-4.png" alt="Histoire de Vizir Group" fill className="object-cover" />
                 </div>
               </AnimatedElement>
             </div>
@@ -95,64 +92,64 @@ export default function AboutPage() {
                       {
                         name: "Doro Diagne",
                         role: "Designer Principal",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/Doro.jpg",
+                        image: "/team/Doro.jpg",
                       },
                       {
                         name: "Pathé Bocoum",
                         role: "Architecte Principal",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/pathe_bocoum.jpg",
+                        image: "/team/pathe.jpg",
                       },
                       {
                         name: "Momar Fall",
                         role: "Gestionnaire administratif et financier",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/Momar.jpg",
+                        image: "/team/Momar.jpg",
                       },
                       {
                         name: "Abdou Aziz Kane",
                         role: "Architecte Sénior",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05627-scaled-1.jpg",
+                        image: "/team/aziz.jpg",
                       },
                       {
                         name: "Penda Kanté",
                         role: "Architecte Sénior",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/Penda.jpg",
+                        image: "/team/penda.jpg",
                       },
                       {
                         name: "Racine Yaya Ndiong",
                         role: "Designer d'Intérieur",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05590-scaled-1.jpg",
+                        image: "/team/racine.jpg",
                       },
                       {
                         name: "Arnold Warren",
                         role: "Architecte Sénior",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05533-scaled-1.jpg",
+                        image: "/team/arnold.jpg",
                       },
                       {
                         name: "MOUTE Frédéric Jospin",
                         role: "Architecte Sénior",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05557-scaled-1.jpg",
+                        image: "/team/moute.jpg",
                       },
                       {
                         name: "Alpha Oumar Diallo",
                         role: "Architecte junior",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05616.jpg",
+                        image: "/team/alpha.jpg",
                       },
                       {
                         name: "Komla Joakim",
                         role: "ARCHITECTE STAFF",
-                        image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05608-scaled-1.jpg",
+                        image: "/team/komla.jpg",
                       },
 
 
                     {
-                      name: "Ahamdou DIOUF",
+                      name: "Ahmadou DIOUF",
                       role: "Designer",
-                      image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05546-1-scaled-1.jpg",
+                      image: "/team/ahmadou.jpg",
                     },
                     {
                       name: "DRO LOUANET HERMANN",
                       role: "Architecte Junior",
-                      image: "https://www.vizirgroup.com/wp-content/uploads/2024/03/MNV05576d.jpg",
+                      image: "/team/dro.jpg",
                     }
                     ].map((member, index) => (
                       <AnimatedElement key={member.name} type="zoom-in" delay={0.1 * index}>
@@ -167,8 +164,8 @@ export default function AboutPage() {
                             />
                             <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/20"></div>
                           </div>
-                          <h3 className="font-medium">{member.name}</h3>
-                          <p className="text-sm text-primary">{member.role}</p>
+                          <h3 className="font-bold uppercase">{member.name}</h3>
+                          <p className="text-sm text-primary uppercase">{member.role}</p>
                         </div>
                       </AnimatedElement>
                     ))}

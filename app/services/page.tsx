@@ -56,11 +56,9 @@ export default function ServicesPage() {
   return (
     <div>
       <div className="relative min-h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image src="https://www.vizirgroup.com/wp-content/uploads/2022/11/Signature-8-scaled.jpg" alt="Nos Services" fill className="object-cover brightness-[0.6]" />
-        </div>
+        
         <div className="container relative z-10 text-center">
-          <h1 className="vizir-heading text-white">Nos Services</h1>
+          <h1 className="vizir-heading text-white border-4 w-50 border-primary p-4 px-4">Nos Services</h1>
         </div>
       </div>
 

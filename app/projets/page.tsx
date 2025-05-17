@@ -61,8 +61,8 @@ export default function ProjectsPage() {
         description:
           "Un complexe résidentiel de luxe avec des finitions haut de gamme et des espaces communs élégants.",
         category: "residential",
-        image: "https://www.vizirgroup.com/wp-content/uploads/2025/05/studio1_halys.webp",
-        location: "Casablanca",
+        image: "/projet_galerie/halys/halys_facade.webp",
+        location: "Guinée Conakry",
         year: 2022,
         featured: true,
         coordinates: {
@@ -70,118 +70,164 @@ export default function ProjectsPage() {
           lng: -7.6298,
         },
       },
-      {
-        id: "anfa-realties",
-        title: "ANFA REALTIES",
-        description: "Un projet immobilier moderne offrant des espaces de vie et de travail dans un quartier prisé.",
-        category: "residential",
-        image: "/anfa-realties.jpg",
-        location: "Casablanca",
-        year: 2021,
-        coordinates: {
-          lat: 33.5931,
-          lng: -7.6398,
-        },
-      },
-      {
-        id: "marina-tower",
-        title: "MARINA TOWER",
-        description: "Une tour emblématique avec des appartements de luxe offrant une vue imprenable sur l'océan.",
-        category: "residential",
-        image: "/marina-tower.jpg",
-        location: "Casablanca",
-        year: 2023,
-        featured: true,
-        coordinates: {
-          lat: 33.6031,
-          lng: -7.6198,
-        },
-      },
-      {
-        id: "business-center",
-        title: "BUSINESS CENTER",
-        description:
-          "Un centre d'affaires moderne avec des espaces de bureaux flexibles et des installations de pointe.",
-        category: "commercial",
-        image: "/business-center.jpg",
-        location: "Rabat",
-        year: 2020,
-        coordinates: {
-          lat: 34.0209,
-          lng: -6.8416,
-        },
-      },
-      {
-        id: "garden-plaza",
-        title: "GARDEN PLAZA",
-        description: "Un complexe commercial avec des espaces verts intégrés et une architecture durable.",
-        category: "commercial",
-        image: "/garden-plaza.jpg",
-        location: "Marrakech",
-        year: 2019,
-        aspectRatio: "landscape",
-        coordinates: {
-          lat: 31.6295,
-          lng: -7.9811,
-        },
-      },
-      {
-        id: "ocean-view",
-        title: "OCEAN VIEW",
-        description: "Un ensemble résidentiel de luxe avec vue sur l'océan et des aménagements exclusifs.",
-        category: "residential",
-        image: "/ocean-view.png",
-        location: "Tanger",
-        year: 2022,
-        aspectRatio: "wide",
-        featured: true,
-        coordinates: {
-          lat: 35.7595,
-          lng: -5.834,
-        },
-      },
-      {
-        id: "modern-offices",
-        title: "MODERN OFFICES",
-        description: "Un espace de bureaux contemporain conçu pour favoriser la créativité et la collaboration.",
-        category: "commercial",
-        image: "/modern-office-building.png",
-        location: "Casablanca",
-        year: 2021,
-        aspectRatio: "portrait",
-        coordinates: {
-          lat: 33.5831,
-          lng: -7.6148,
-        },
-      },
-      {
-        id: "luxury-villas",
-        title: "LUXURY VILLAS",
-        description: "Des villas de luxe offrant intimité, confort et vues panoramiques.",
-        category: "residential",
-        image: "/halys-interior-1.png",
-        location: "Marrakech",
-        year: 2023,
-        aspectRatio: "landscape",
-        coordinates: {
-          lat: 31.6395,
-          lng: -7.9911,
-        },
-      },
-      {
-        id: "urban-apartments",
-        title: "URBAN APARTMENTS",
-        description: "Des appartements urbains alliant fonctionnalité et design contemporain.",
-        category: "residential",
-        image: "/anfa-interior-2.png",
-        location: "Rabat",
-        year: 2020,
-        aspectRatio: "square",
-        coordinates: {
-          lat: 34.0109,
-          lng: -6.8316,
-        },
-      },
+    
+  {
+    id: "sanou-lodge",
+    title: "SANOU LODGE",
+    description: "Complexe résidentiel moderne offrant des espaces de vie lumineux et une architecture épurée.",
+    category: "residential",
+    image: "https://www.vizirgroup.com/wp-content/uploads/2025/05/facade-v4.jpg",
+    location: "Dakar",
+    year: 2023,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+
+  {
+    id: "elcamino",
+    title: "HACIENDA EL CAMINO",
+    description: "La Hacienda El Camino, située à Nguerigne, M'bour, offre un refuge paisible loin de l'agitation urbaine.",
+    category: "residential",
+    image: "/projet_galerie/el-camino/elcamino1.webp",
+    location: "Nguerigne - M'bour – Sénégal",
+    year: 2024,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "wabi",
+    title: "WABI",
+    description: "Résidence haut de gamme avec des finitions de luxe et des équipements modernes.",
+    category: "residential",
+    image: "/projet_galerie/wabi/wabi_façade.webp",
+    location: "Congo",
+    year: 2024,
+    featured: true,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "les-abbesses",
+    title: "LES ABBESSES",
+    description: "Ensemble résidentiel offrant des appartements spacieux et bien situés.",
+    category: "residential",
+    image: "/projet_galerie/abbesses/facade-2-av-gig-gigapixel-hq-scale-2_00x.webp",
+    location: "Dakar",
+    year: 2023,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "spi-tower",
+    title: "SPI TOWER",
+    description: "SPI Tower est un immeuble résidentiel moderne situé au cœur du Congo. Conçu avec un design soigné et une organisation bien pensée, il offre des appartements spacieux et lumineux, chacun doté de balcons permettant de profiter d'une vue dégagée sur la ville. ",
+    category: "residential",
+    image: "/projet_galerie/spi-tower/spi-tower-facade.webp",
+    location: "Congo",
+    year: 2025,
+    featured: true,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "e-loft",
+    title: "E LOFT",
+    description: "Espaces de travail collaboratifs offrant flexibilité et connectivité pour les professionnels.",
+    category: "residential",
+    image: "/projet_galerie/e-loft/e-loft-1.webp",
+    location: "Dakar",
+    year: 2024,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "mbadone",
+    title: "MBADONE",
+    description: "MBADONE est un immeuble résidentiel haut de gamme située à Abidjan, alliant design moderne, façades végétalisées et matériaux de qualité.",
+    category: "residential",
+    image: "/projet_galerie/mbadone/mbadone-1.webp",
+    location: "Abidjan, Côte d'Ivoire",
+    year: 2023,
+    featured: true,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+
+  {
+id: "asante",
+title: "Asante",
+description: "Située à Somone, Asante est une cité résidentielle moderne alliant élégance, confort et cadre tropical.",    
+category: "residential",
+image: "/projet_galerie/asante/Hall.webp",
+location: "Dakar",
+year: 2022,
+featured: true,  
+coordinates: {
+  lat: 14.6928,
+  lng: -17.4467,
+}
+  },
+  {
+    id: "villa-b-coulibaly",
+    title: "VILLA B. COULIBALY",
+    description: "L'architecture de cette villa a été conçue en tenant compte des moindres détails et des préférences du client. Elle est composé de pièces majestueuses à l’intérieur et d’une très grande terrasse avec piscine accompagné d’un beau salon extérieur.",
+    category: "residential",
+    image: "/projet_galerie/villa_b_coulibaly/villa-b-c1.jpg",
+    location: "Dakar",
+    year: 2022,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "villa-coulibaly-2",
+    title: "Villa Coulibaly 2",
+    description: "Extension moderne de la villa Coulibaly avec des espaces supplémentaires et une vue panoramique.",
+    category: "residential",
+    image: "/projet_galerie/villa_b_coulibaly/villa_b_coulibaly2/villa-coulibaly-2.jpg",
+    location: "Dakar",
+    year: 2024,
+    featured: true,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  },
+  {
+    id: "immeuble-win-win",
+    title: "IMMEUBLE WIN WIN",
+    description: "Immeuble commercial offrant des espaces de bureaux flexibles et bien situés.",
+    category: "residential",
+    image: "/projet_galerie/win-win/win_win-1.webp",
+    location: "CITE KEUR GORGUI - MERMOZ SACRE CŒUR - DAKAR",
+    year: 2023,
+    featured: false,
+    coordinates: {
+      lat: 14.6928,
+      lng: -17.4467,
+    },
+  }
+
     ]
 
     setProjects(projectsData)
@@ -314,8 +360,6 @@ export default function ProjectsPage() {
                   {project.title}
                 </h3>
                 <div className="flex justify-between items-center mt-2">
-                  <p className="text-white/90 text-xs sm:text-sm">{project.location}</p>
-                  <p className="text-white/90 text-xs sm:text-sm">{project.year}</p>
                 </div>
               </div>
 
@@ -420,7 +464,7 @@ export default function ProjectsPage() {
       </div>
 
       <div className="container py-16 md:py-24">
-        <div className="space-y-12">
+        <div className="space-y-12 pb-12">
           <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:justify-between sm:items-center">
             <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4">
               <Button
@@ -428,7 +472,7 @@ export default function ProjectsPage() {
                 className={activeCategory === "all" ? "bg-primary text-primary-foreground" : "vizir-button"}
                 onClick={() => setActiveCategory("all")}
               >
-                Tous
+                Mixtes
               </Button>
               <Button
                 variant={activeCategory === "residential" ? "default" : "outline"}
@@ -468,22 +512,6 @@ export default function ProjectsPage() {
               </Button>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <div className="w-full sm:w-auto">
-                <Select value={sortBy} onValueChange={(value) => setSortBy(value as SortOption)}>
-                  <SelectTrigger className="w-full sm:w-[200px]">
-                    <SelectValue placeholder="Trier par" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="newest">Plus récents</SelectItem>
-                    <SelectItem value="oldest">Plus anciens</SelectItem>
-                    <SelectItem value="name-asc">Nom (A-Z)</SelectItem>
-                    <SelectItem value="name-desc">Nom (Z-A)</SelectItem>
-                    <SelectItem value="location">Emplacement</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
               <div className="flex justify-center gap-2">
                 <Button
                   variant={viewMode === "masonry" ? "default" : "outline"}
@@ -505,20 +533,10 @@ export default function ProjectsPage() {
                   <List size={18} />
                   <span className="sr-only">Vue liste</span>
                 </Button>
-                <Button
-                  variant={viewMode === "map" ? "default" : "outline"}
-                  size="icon"
-                  className={viewMode === "map" ? "bg-primary text-primary-foreground" : ""}
-                  onClick={() => setViewMode("map")}
-                  title="Vue carte"
-                >
-                  <Map size={18} />
-                  <span className="sr-only">Vue carte</span>
-                </Button>
+                
               </div>
             </div>
           </div>
-
           <div className="transition-opacity duration-300">
             {sortedProjects.length > 0
               ? viewMode === "masonry"
@@ -530,6 +548,5 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-    </div>
   )
 }

@@ -145,7 +145,7 @@ export default function ProjectImageCarousel({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={openFullscreen}
-            className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 z-20 bg-black/50 p-1 sm:p-2 text-white backdrop-blur-sm transition-all hover:bg-black/70 opacity-0 group-hover:opacity-100 rounded-full"
+            className="absolute right-2 sm:right-4 bottom-2 sm:bottom-4 z-[999] z-20 bg-black/50 p-1 sm:p-2 text-white backdrop-blur-sm transition-all hover:bg-black/70 opacity-0 group-hover:opacity-100 rounded-full"
             aria-label="Voir en plein écran"
           >
             <Maximize2 className="h-4 w-4 sm:h-5 sm:w-5" />

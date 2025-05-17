@@ -21,16 +21,31 @@ const heroProjects = [
     id: "spitower",
     title: "Spy Tower",
     description: "Un projet immobilier moderne offrant des espaces de vie et de travail dans un quartier prisé.",
-    image: "https://www.vizirgroup.com/wp-content/uploads/2025/05/WhatsApp-Image-2024-10-15-at-17.43.45.webp",
+    image: "https://www.vizirgroup.com/wp-content/uploads/2025/05/salon-outdoor-av-gig-gigapixel-hq-scale-2_00x.webp",
     location: "congo",
   },
   {
-    id: "elamino",
+    id: "elcamino",
     title: "El Camino",
     description: "Une tour emblématique avec des appartements de luxe offrant une vue imprenable sur l'océan.",
     image: "https://www.vizirgroup.com/wp-content/uploads/2024/08/entree-final-2.webp",
     location: "Nguerigne, Mbour, Senegal",
   },
+
+   {
+    id: "sanou-lodge",
+    title: "Sanou Lounge",
+    description: "Sanou Lodge est un ensemble résidentiel à l’architecture élégante et naturelle, pensé pour offrir un lieu de vie paisible et authentique.",
+    image: "https://www.vizirgroup.com/wp-content/uploads/2025/05/facade-v4.jpg",
+    location: "Dakar, SENEGAL"
+  },
+  {
+    id: "akwa-residence",
+    title: "Akwa Résidence",
+    description: "La résidence Akwa, au cœur des Almadies à Dakar, offre une position centrale privilégiée, permettant aux résidents de profiter pleinement des plages magnifiques et des vues spectaculaires sur l'océan Atlantique. ",
+    image: "https://www.vizirgroup.com/wp-content/uploads/2024/05/HALL.jpg",
+    location: "Ngor, Dakar- Sénégal",
+  }
 ]
 
 export default function Hero() {
@@ -99,7 +114,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="text-base sm:text-lg max-w-md bg-background/70 backdrop-blur-sm p-3 sm:p-4"
+                    className="text-base sm:text-lg  max-w-md bg-background/70 backdrop-blur-sm p-3 sm:p-4"
                   >
                     {project.description}
                   </motion.p>
@@ -111,7 +126,7 @@ export default function Hero() {
                   >
                     <AnimatedButton
                       variant="outline"
-                      className="vizir-button bg-background/70 backdrop-blur-sm"
+                      className="vizir-button border-4  border-primary p-4 px-4 bg-background/70 backdrop-blur-sm"
                       asChild
                     >
                       <Link href={`/projets/${project.id}`}>Découvrir le projet</Link>

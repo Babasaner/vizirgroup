@@ -49,11 +49,8 @@ export default function ContactPage() {
   return (
     <div>
       <div className="relative min-h-[40vh] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image src="/contact-hero.png" alt="Contactez-nous" fill className="object-cover brightness-[0.6]" />
-        </div>
         <div className="container relative z-10 text-center">
-          <h1 className="vizir-heading text-white">Contactez-nous</h1>
+          <h1 className="vizir-heading border-4 w-50 border-primary p-4 px-4 text-white">Contactez-nous</h1>
         </div>
       </div>
 
@@ -74,7 +71,7 @@ export default function ContactPage() {
                 <MapPin className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-medium">Adresse</h3>
-                  <p className="text-muted-foreground">123 Boulevard Mohammed V, Casablanca, Maroc</p>
+                  <p className="text-muted-foreground">Dakar, Senegal, 13 mamelles renaissance BP11320</p>
                 </div>
               </div>
 
@@ -82,7 +79,7 @@ export default function ContactPage() {
                 <Phone className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-medium">Téléphone</h3>
-                  <p className="text-muted-foreground">+212 5XX XX XX XX</p>
+                  <p className="text-muted-foreground">+(221) 77 586 83 83</p>
                 </div>
               </div>
 
@@ -90,7 +87,7 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-muted-foreground">contact@vizirgroup.com</p>
+                  <p className="text-muted-foreground">info@vizirgroup.com</p>
                 </div>
               </div>
 
@@ -107,7 +104,13 @@ export default function ContactPage() {
             <div className="relative aspect-video overflow-hidden">
               {/* Remplacer par une carte Google Maps réelle */}
               <div className="absolute inset-0 bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground">Carte Google Maps à intégrer ici</p>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://maps.google.com/maps?q=Vizir%20Group%20%2C%20Dakar&t=m&z=15&output=embed&iwloc=near"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -124,7 +127,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="grid gap-6">
               <div className="grid gap-4">
                 <label htmlFor="name" className="font-medium">
-                  Nom complet
+                  Prenom & Nom
                 </label>
                 <Input
                   id="name"
@@ -162,7 +165,7 @@ export default function ContactPage() {
                   name="phone"
                   value={formState.phone}
                   onChange={handleChange}
-                  placeholder="+212 5XX XX XX XX"
+                  placeholder="Telephone"
                   className="bg-secondary border-border/40"
                 />
               </div>

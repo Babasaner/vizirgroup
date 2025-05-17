@@ -121,9 +121,9 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-medium uppercase tracking-wider">Contact</h3>
             <ul className="grid gap-2">
-              <li className="text-sm text-muted-foreground">123 Boulevard Mohammed V, Casablanca, Maroc</li>
-              <li className="text-sm text-muted-foreground">+212 5XX XX XX XX</li>
-              <li className="text-sm text-muted-foreground">contact@vizirgroup.com</li>
+              <li className="text-sm text-muted-foreground">Dakar, Senegal, 13 mamelles renaissance BP11320</li>
+              <li className="text-sm text-muted-foreground">+(221) 77 586 83 83</li>
+              <li className="text-sm text-muted-foreground">info@vizirgroup.com</li>
               <li className="text-sm text-muted-foreground">Lundi - Vendredi: 9h00 - 18h00</li>
             </ul>
           </div>
