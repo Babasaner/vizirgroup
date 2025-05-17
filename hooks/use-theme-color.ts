@@ -18,9 +18,9 @@ export type ColorPalette = {
 
 export const colorPalettes: ColorPalette[] = [
   {
-    id: "gold",
-    name: "Or",
-    primary: "#c0a060",
+    id: "blanche",
+    name: "Blanche",
+    primary: "#fff",
     primaryHue: 36,
     primarySaturation: 30,
     primaryLightness: 60,

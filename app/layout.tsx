@@ -1,3 +1,4 @@
+
 import type React from "react"
 import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
 import { Inter } from "next/font/google"
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
     ],
    
   },
-  manifest: "/site.webmanifest",
-    generator: 'v0.dev'
+  manifest: "/site.webmanifest"
+    
 }
 
 export default function RootLayout({

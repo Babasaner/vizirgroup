@@ -3,9 +3,12 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import AnimatedElement from "@/components/animated-element"
-import AnimatedText from "@/components/animated-text"
-import PageTransition from "@/components/page-transition"
+import dynamic from "next/dynamic"
+
+// Empêche le rendu serveur de ces composants
+const AnimatedElement = dynamic(() => import("@/components/animated-element"), { ssr: false })
+const AnimatedText = dynamic(() => import("@/components/animated-text"), { ssr: false })
+const PageTransition = dynamic(() => import("@/components/page-transition"), { ssr: false })
 
 export default function AboutPage() {
   return (
@@ -13,12 +16,17 @@ export default function AboutPage() {
       <div>
         <div className="relative min-h-[60vh] flex items-center justify-center">
           <div className="container relative z-10 text-center">
-            <AnimatedText text="A propos" className="vizir-heading text-white border-4 border-primary p-4 px-4" tag="h1" />
+            <AnimatedText
+              text="A propos"
+              className="vizir-heading text-white border-4 border-primary p-4 px-4"
+              tag="h1"
+            />
           </div>
         </div>
 
         <div className="container py-16 md:py-24">
           <div className="grid gap-16">
+            {/* Section Histoire */}
             <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
               <AnimatedElement type="slide-right">
                 <div className="space-y-6">
@@ -27,7 +35,7 @@ export default function AboutPage() {
                     <div className="w-20 h-1 bg-primary"></div>
                   </div>
                   <p className="text-muted-foreground">
-                    Fondé en 2010, Vizir Group s'est rapidement imposé comme un leader dans le secteur de la
+                    Fondé en 2010, Vizir Group s&apos;est rapidement imposé comme un leader dans le secteur de la
                     construction et du développement immobilier au Maroc. Notre parcours est marqué par une croissance
                     constante, des projets innovants et un engagement inébranlable envers la qualité.
                   </p>
@@ -45,10 +53,16 @@ export default function AboutPage() {
               </AnimatedElement>
             </div>
 
+            {/* Section Vision */}
             <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
               <AnimatedElement type="slide-right" className="order-2 md:order-1">
                 <div className="relative aspect-video overflow-hidden">
-                  <Image src="https://www.vizirgroup.com/wp-content/uploads/2024/03/Img-1-1.jpg" alt="Notre vision" fill className="object-cover" />
+                  <Image
+                    src="https://www.vizirgroup.com/wp-content/uploads/2024/03/Img-1-1.jpg"
+                    alt="Notre vision"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </AnimatedElement>
               <AnimatedElement type="slide-left" delay={0.2} className="order-1 md:order-2">
@@ -58,9 +72,9 @@ export default function AboutPage() {
                     <div className="w-20 h-1 bg-primary"></div>
                   </div>
                   <p className="text-muted-foreground">
-                    Notre vision est de redéfinir les standards de l'industrie en créant des espaces qui allient
+                    Notre vision est de redéfinir les standards de l&apos;industrie en créant des espaces qui allient
                     esthétique, fonctionnalité et durabilité. Nous aspirons à transformer le paysage urbain tout en
-                    respectant l'environnement et en contribuant au bien-être des communautés.
+                    respectant l&apos;environnement et en contribuant au bien-être des communautés.
                   </p>
                   <p className="text-muted-foreground">
                     Chaque projet est une opportunité de laisser une empreinte positive et durable, et nous nous
@@ -70,6 +84,7 @@ export default function AboutPage() {
               </AnimatedElement>
             </div>
 
+            {/* Section Équipe */}
             <div className="grid gap-12 items-center">
               <AnimatedElement type="fade-in">
                 <div className="space-y-8">
@@ -83,86 +98,36 @@ export default function AboutPage() {
                     vie à vos projets.
                   </p>
                   <p className="text-muted-foreground">
-                    Nous valorisons l'innovation, la créativité et l'excellence technique, ce qui nous permet de relever
-                    les défis les plus complexes et de dépasser les attentes de nos clients.
+                    Nous valorisons l&apos;innovation, la créativité et l&apos;excellence technique, ce qui nous permet
+                    de relever les défis les plus complexes et de dépasser les attentes de nos clients.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
                     {[
-                      {
-                        name: "Doro Diagne",
-                        role: "Designer Principal",
-                        image: "/team/Doro.jpg",
-                      },
-                      {
-                        name: "Pathé Bocoum",
-                        role: "Architecte Principal",
-                        image: "/team/pathe.jpg",
-                      },
-                      {
-                        name: "Momar Fall",
-                        role: "Gestionnaire administratif et financier",
-                        image: "/team/Momar.jpg",
-                      },
-                      {
-                        name: "Abdou Aziz Kane",
-                        role: "Architecte Sénior",
-                        image: "/team/aziz.jpg",
-                      },
-                      {
-                        name: "Penda Kanté",
-                        role: "Architecte Sénior",
-                        image: "/team/penda.jpg",
-                      },
-                      {
-                        name: "Racine Yaya Ndiong",
-                        role: "Designer d'Intérieur",
-                        image: "/team/racine.jpg",
-                      },
-                      {
-                        name: "Arnold Warren",
-                        role: "Architecte Sénior",
-                        image: "/team/arnold.jpg",
-                      },
-                      {
-                        name: "MOUTE Frédéric Jospin",
-                        role: "Architecte Sénior",
-                        image: "/team/moute.jpg",
-                      },
-                      {
-                        name: "Alpha Oumar Diallo",
-                        role: "Architecte junior",
-                        image: "/team/alpha.jpg",
-                      },
-                      {
-                        name: "Komla Joakim",
-                        role: "ARCHITECTE STAFF",
-                        image: "/team/komla.jpg",
-                      },
-
-
-                    {
-                      name: "Ahmadou DIOUF",
-                      role: "Designer",
-                      image: "/team/ahmadou.jpg",
-                    },
-                    {
-                      name: "DRO LOUANET HERMANN",
-                      role: "Architecte Junior",
-                      image: "/team/dro.jpg",
-                    }
+                      { name: "Doro Diagne", role: "Designer Principal", image: "/team/Doro.jpg" },
+                      { name: "Pathé Bocoum", role: "Architecte Principal", image: "/team/pathe.jpg" },
+                      { name: "Momar Fall", role: "Gestionnaire administratif et financier", image: "/team/Momar.jpg" },
+                      { name: "Abdou Aziz Kane", role: "Architecte Sénior", image: "/team/aziz.jpg" },
+                      { name: "Penda Kanté", role: "Architecte Sénior", image: "/team/penda.jpg" },
+                      { name: "Racine Yaya Ndiong", role: "Designer d'Intérieur", image: "/team/racine.jpg" },
+                      { name: "Arnold Warren", role: "Architecte Sénior", image: "/team/arnold.jpg" },
+                      { name: "MOUTE Frédéric Jospin", role: "Architecte Sénior", image: "/team/moute.jpg" },
+                      { name: "Alpha Oumar Diallo", role: "Architecte junior", image: "/team/alpha.jpg" },
+                      { name: "Komla Joakim", role: "ARCHITECTE STAFF", image: "/team/komla.jpg" },
+                      { name: "Ahmadou DIOUF", role: "Designer", image: "/team/ahmadou.jpg" },
+                      { name: "DRO LOUANET HERMANN", role: "Architecte Junior", image: "/team/dro.jpg" }
                     ].map((member, index) => (
                       <AnimatedElement key={member.name} type="zoom-in" delay={0.1 * index}>
                         <div className="space-y-3 group">
                           <div className="relative w-full aspect-[3/4] overflow-hidden">
                             <Image
-                              src={member.image || "/placeholder.svg"}
+                              src={member.image}
                               alt={member.name}
                               fill
                               className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                               sizes="(max-width: 768px) 100vw, 33vw"
                             />
-                            <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/20"></div>
+                            <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/20" />
                           </div>
                           <h3 className="font-bold uppercase">{member.name}</h3>
                           <p className="text-sm text-primary uppercase">{member.role}</p>
@@ -174,6 +139,7 @@ export default function AboutPage() {
               </AnimatedElement>
             </div>
 
+            {/* Call to action */}
             <AnimatedElement type="bounce">
               <div className="text-center space-y-8">
                 <h2 className="vizir-subheading">Prêt à Collaborer?</h2>

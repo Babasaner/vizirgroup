@@ -25,7 +25,6 @@ export default function Navbar() {
       label: "Projets",
       children: [
         { href: "/projets", label: "Tous les projets" },
-        { href: "/projets/featured", label: "Projets phares" },
         { href: "/projets?category=residential", label: "Résidentiels" },
         { href: "/projets?category=commercial", label: "Commerciaux" },
       ],
@@ -116,7 +115,7 @@ export default function Navbar() {
           <ThemeColorPicker />
           <ThemeToggle />
           <Button variant="outline" className="vizir-button">
-            Demander mon projet
+           <Link href="https://form.typeform.com/to/LcZHR0gb?typeform-embed-id=6326678439401704&typeform-embed=embed-widget&typeform-source=vizirgroup.com&typeform-medium=snippet&typeform-medium-version=next&typeform-embed-handles-redirect=1" target="_blank">Demarrer mon projet</Link>
           </Button>
         </div>
 
@@ -198,7 +197,7 @@ export default function Navbar() {
             </nav>
             <div className="mt-auto pt-8">
               <Button variant="outline" className="w-full vizir-button">
-                Demander mon projet
+                 <Link href="https://form.typeform.com/to/LcZHR0gb?typeform-embed-id=6326678439401704&typeform-embed=embed-widget&typeform-source=vizirgroup.com&typeform-medium=snippet&typeform-medium-version=next&typeform-embed-handles-redirect=1" target="_blank">Demarrer mon projet</Link>
               </Button>
             </div>
           </SheetContent>

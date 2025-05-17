@@ -22,7 +22,7 @@ export default function ContactCta() {
             aider à la réaliser.
           </p>
           <Button asChild variant="outline" className="vizir-button">
-            <Link href="/contact">Demander mon projet</Link>
+            <Link href="/contact">Demarrer mon projet</Link>
           </Button>
         </div>
       </div>
